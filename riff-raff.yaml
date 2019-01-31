@@ -9,7 +9,7 @@ templates:
       bucket: gu-jr-test-dist
       functionNames: [jr-test-]
       fileName:  jr-test.zip
-      prefixStack: false
+      prefixStack: false 
 
 deployments:
   jr-test-upload:
