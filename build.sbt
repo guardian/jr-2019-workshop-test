@@ -1,4 +1,4 @@
-name := "<name of project>"
+name := "jr-test"
 
 organization := "com.gu"
 
