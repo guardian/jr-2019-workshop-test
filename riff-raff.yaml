@@ -1,7 +1,7 @@
 stacks: [playground]
 regions: [eu-west-1]
 templates:
-  <name of project>:
+  jr-test:
     type: aws-lambda
     app: jr-test
     contentDirectory: jr-test
@@ -12,6 +12,6 @@ templates:
       prefixStack: false
 
 deployments:
-jr-test-upload:
-  template: jr-test
-  actions: [uploadLambda]
+  jr-test-upload:
+    template: jr-test
+    actions: [uploadLambda]
