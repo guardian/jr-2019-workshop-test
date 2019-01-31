@@ -6,7 +6,7 @@ templates:
     app: jr-test
     contentDirectory: jr-test
     parameters:
-        bucket: gu-jr-test-dist
+      bucket: gu-jr-test-dist
       functionNames: [jr-test-]
       fileName:  jr-test.zip
       prefixStack: false
@@ -25,7 +25,7 @@ deployments:
       cloudFormationStackName: jr-test
       templatePath: cfn.yaml
 
-  <name of your project>-lambda-update:
+  jr-test-lambda-update:
     template: jr-test
     actions: [updateLambda]
     dependencies: [jr-test-cfn]
