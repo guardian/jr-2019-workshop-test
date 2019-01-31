@@ -18,7 +18,11 @@ scalacOptions ++= Seq(
 val circeVersion = "0.7.0"
 
 libraryDependencies ++= Seq(
-  "com.amazonaws" % "aws-lambda-java-core" % "1.1.0"
+  "com.amazonaws" % "aws-lambda-java-core" % "1.1.0",
+"io.circe" %% "circe-parser" % "0.7.0",
+"io.circe" %% "circe-generic-extras_sjs0.6" % "0.7.0"
+exclude("org.typelevel", "cats-core_sjs0.6_2.11" )
+exclude("com.chuusai", "shapeless_sjs0.6_2.11")
 )
 
 enablePlugins(JavaAppPackaging, RiffRaffArtifact)
@@ -30,3 +34,4 @@ riffRaffPackageType := (packageBin in Universal).value
 riffRaffUploadArtifactBucket := Option("riffraff-artifact")
 riffRaffUploadManifestBucket := Option("riffraff-builds")
 riffRaffArtifactResources += (file("cfn.yaml"), s"${name.value}-cfn/cfn.yaml")
+
